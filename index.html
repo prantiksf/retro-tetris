@@ -7,18 +7,25 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="wrap">
-  <h1>Retro Tetris</h1>
-  <canvas id="board" width="240" height="480" aria-label="Tetris board"></canvas>
-  <div class="ui">
-    <div class="score">Score: <span id="score">0</span></div>
-    <div class="buttons">
-      <button id="start" type="button">Start</button>
-      <button id="pause" type="button">Pause</button>
-      <button id="reset" type="button">Reset</button>
-    </div>
+<div class="gb">
+  <header class="hud">
+    <div class="hud-item"><span class="label">Level</span><span id="level">1</span></div>
+    <h1 class="title">Retro Tetris</h1>
+    <div class="hud-item right"><span class="label">Score</span><span id="score">0</span></div>
+  </header>
+
+  <div class="frame">
+    <div class="bezel left" aria-hidden="true"></div>
+    <canvas id="board" width="240" height="480" aria-label="Tetris board"></canvas>
+    <div class="bezel right" aria-hidden="true"></div>
   </div>
-  <p class="hint">Arrow keys move and rotate. Up = Rotate, Down = Soft drop.</p>
+
+  <div class="controls">
+    <button id="start" type="button">Start</button>
+    <button id="pause" type="button">Pause</button>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <p class="hint">Arrows: Left/Right move, Down soft-drop, Up rotate, Space hard-drop</p>
 </div>
 <script src="main.js"></script>
 </body>
